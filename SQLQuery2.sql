@@ -1,0 +1,2 @@
+﻿Select Products.ProductName as [Ürün adı],sum(([Order Details].UnitPrice*[Order Details].Quantity)) As [Kazanılan Toplam miktar] from Products inner join [Order Details] 
+on [Order Details].ProductID=Products.ProductID  inner join Orders on [Order Details].OrderID=Orders.OrderID group by Products.ProductName
